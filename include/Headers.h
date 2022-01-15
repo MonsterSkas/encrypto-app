@@ -3,3 +3,5 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <Windows.h>
+
+using std::string;
