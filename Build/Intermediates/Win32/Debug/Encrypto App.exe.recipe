@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>E:\CODING\EncryptoApp\Encrypto App\Build\Win32\Debug\Encrypto App.exe</FullPath>
+      <FullPath>E:\CODING\EncryptoApp\Repositories\encrypto-app\Build\Win32\Debug\Encrypto App.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

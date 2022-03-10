@@ -1,32 +1,33 @@
 #include <Headers.h>
+#include <Using.h>
+#include <Pragma.h>
 
 //Encrypt and Decrypt files
 //-------------------------
 #include "Encrypt.cpp"
 #include "Decrypt.cpp"
 
-#include <Pragma.h>
-
 class Program
 {
 private:
 
-    std::string choice;
+    char choice;
 
 public:
 
     Program()
     {
         SetConsoleTitleA("Encrypto v1.0");
-        std::cout << "Encrypto v1.0";
+        cout << "Encrypto v1.0";
 
         for (;;)
         {
             system("color e");
 
-            std::cout << "\n\n| 1 | Encrypt";
-            std::cout << "\n| 2 | Decrypt";
-            std::cout << "\n| 0 | Exit";
+            cout << endl << endl << "| 1 | Encrypt";
+            cout << endl << "| 2 | Decrypt";
+            cout << endl << "| 3 | Clear";
+            cout << endl << "| 0 | Exit";
 
             Choice();
         }
@@ -34,31 +35,31 @@ public:
 
     void Choice()
     {
-        std::cout << "\n\n> ";
+        cout << endl << endl << "> ";
 
         fflush(stdin);
         choice = _getche();
 
-        if (choice == "1")
+        if (choice == '1')
         {
             Encrypt e;
         }
-        else if (choice == "2")
+        else if (choice == '2')
         {
             Decrypt d;
         }
-        else if (choice == "3")
+        else if (choice == '3')
         {
             system("cls");
-            std::cout << "Encrypto v1.0";
+            cout << "Encrypto v1.0";
         }
-        else if (choice == "0")
+        else if (choice == '0')
         {
             exit(0);
         }
         else
         {
-            std::cout << "\nWrong arguments!";
+            cout << endl << "Wrong arguments!";
             Choice();
         }
     }
@@ -67,4 +68,6 @@ public:
 int main()
 {
     Program p;
+
+    return 0;
 }

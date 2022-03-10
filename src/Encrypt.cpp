@@ -1,5 +1,5 @@
 #include <Headers.h>
-
+#include <Using.h>
 #include <Pragma.h>
 
 class Encrypt
@@ -8,35 +8,40 @@ private:
 
     char source[100];
     char data;
+    Animations an;
 
 public:
 
     Encrypt()
     {
-
-        std::cout << "\nEnter name of the file to encrypt";
-        std::cout << "\n\n> ";
+        cout << endl << "Enter name of the file to encrypt";
+        cout << endl << endl << "> ";
 
         fflush(stdin);
-        std::cin.getline(source, 100);
+        cin.getline(source, 100);
 
         //Source file
         //-----------
         std::ifstream infile(source);
 
-        std::cout << std::endl;
+        cout << endl;
 
         if (!infile)
-            std::cout << "Error opening file!";
-
+        {
+            an.Anime_line(200, 2);
+            cout << "Error opening file!";
+        }
         else
         {
             //Target file
             //-----------
             std::ofstream outfile("ENCRYPTED.txt");
 
+            an.Anime_line(200, 2);
+
             while (infile)
             {
+                Sleep(5);
                 //Read data from source file
                 //--------------------------
                 infile.get(data);
@@ -44,7 +49,7 @@ public:
                 //------------------------------------------------
                 outfile.put(~data);
 
-                std::cout << ~data;
+                cout << ~data;
             }
 
             //Close the target file
@@ -52,7 +57,13 @@ public:
             outfile.close();
 
             if (data != 0)
-                std::cout << "\nEncrypt successfull!";
+            {
+                cout << endl;
+                an.Anime_line(200, 2);
+                cout  << "Encrypt successfull!";
+                cout << endl;
+                cout  << "Encrypted data put in ENCRYPTED.txt";
+            }
         }
     }
 };
