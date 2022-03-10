@@ -8,7 +8,7 @@ private:
 
     char source[100];
     char data;
-    Animations an2;
+    Animations an_de;
 
 public:
 
@@ -28,7 +28,7 @@ public:
 
         if (!infile)
         {
-            an2.Anime_line(200, 2);
+            an_de.Anime_line(200, 2);
             cout << "Error opening file!";
         }
         else
@@ -37,7 +37,7 @@ public:
             //-----------
             std::ofstream outfile("DECRYPTED.txt");
 
-            an2.Anime_line(200, 2);
+            an_de.Anime_line(200, 2);
 
             while (infile)
             {
@@ -59,7 +59,7 @@ public:
             if (data != 0)
             {
                 cout << endl;
-                an2.Anime_line(200, 2);
+                an_de.Anime_line(200, 2);
                 cout <<  "Decrypt successfull!";
                 cout << endl;
                 cout <<  "Decrypted data put in DECRYPTED.txt";
