@@ -1,5 +1,5 @@
 Build
 .vs
 *.sln
-*.vcxproj
-*.vcxproj.user
+Encrypto_App.vcxproj
+Encrypto_App.vcxproj.user
