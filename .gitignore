@@ -1,5 +1,5 @@
 Build
-.vs
+.vs/Encrypto_App/v16
 *.sln
 Encrypto_App.vcxproj
 Encrypto_App.vcxproj.user

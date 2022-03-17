@@ -14,7 +14,7 @@ private:
     char choice;
 
 public:
-
+    
     Program()
     {
         SetConsoleTitleA("Encrypto v1.0");
