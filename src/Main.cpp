@@ -18,13 +18,12 @@ public:
     Program()
     {
         SetConsoleTitleA("Encrypto v1.0");
-        cout << "Encrypto v1.0";
 
         for (;;)
         {
             system("color e");
 
-            cout << endl << endl << "| 1 | Encrypt";
+            cout << "| 1 | Encrypt";
             cout << endl << "| 2 | Decrypt";
             cout << endl << "| 3 | Clear";
             cout << endl << "| 0 | Exit";
