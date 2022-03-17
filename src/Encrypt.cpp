@@ -17,7 +17,7 @@ public:
         cout << endl << "Enter name of the file to encrypt";
         cout << endl << endl << "> ";
 
-        fflush(stdin);
+        cin.ignore();
         cin.getline(source, 100);
 
         //Source file

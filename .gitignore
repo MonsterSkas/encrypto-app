@@ -1,2 +1,5 @@
 Build
-.vs/Encrypto App/v16/Browse.VC.opendb
+.vs
+*.sln
+*.vcxproj
+*.vcxproj.user

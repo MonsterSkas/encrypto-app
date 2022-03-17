@@ -37,8 +37,7 @@ public:
     {
         cout << endl << endl << "> ";
 
-        fflush(stdin);
-        choice = _getche();
+        cin >> choice;
 
         if (choice == '1')
         {
