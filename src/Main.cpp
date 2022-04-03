@@ -49,7 +49,6 @@ public:
         else if (choice == '3')
         {
             system("cls");
-            cout << "Encrypto v1.0";
         }
         else if (choice == '0')
         {

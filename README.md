@@ -1,4 +1,4 @@
 # Encrypto App
 A simple app used for encrypting files
 # Download
-https://mega.nz/file/psx0DIiR#xre9pnhcv4OUCElIMsF9a9Nqw_V014jEqTGmxmzFbQU
+https://mega.nz/file/YlgRGSTB#9zTs48E5ZU8xNWCDi6gI7DUA97_Nbo_yDN9DRo1NmhA

@@ -29,7 +29,7 @@ public:
         if (!infile)
         {
             an_de.Anime_line(200, 2);
-            cout << "Error opening file!";
+            cout << "Error opening file!" << endl << endl;
         }
         else
         {
@@ -60,9 +60,9 @@ public:
             {
                 cout << endl;
                 an_de.Anime_line(200, 2);
-                cout <<  "Decrypt successfull!";
+                cout <<  "Decrypt successfull!" << endl;
                 cout << endl;
-                cout <<  "Decrypted data put in DECRYPTED.txt";
+                cout << "Decrypted data put in DECRYPTED.txt" << endl << endl;
             }
         }
     }
