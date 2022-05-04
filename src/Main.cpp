@@ -7,12 +7,22 @@
 
 using namespace std;
 
+class appInit {
+public:
+    appInit(bool title, bool color) {
+        if(title = true)
+            SetConsoleTitleA("Encrypto v1.0");
+        if(color = true)
+            system("color e");
+    }
+};
+
 void Choice();
 
 int main() {
 
-    SetConsoleTitleA("Encrypto v1.0");
-    system("color e");
+    appInit* init = new appInit(true, true);
+    delete init;
 
     for (;;) {
 
