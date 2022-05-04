@@ -1,19 +1,18 @@
 #include <Headers.h>
-#include <Using.h>
-#include <Pragma.h>
 
-class Decrypt
-{
+using namespace std;
+
+class Decrypt {
 private:
 
     char source[100];
-    char data;
-    Animations an_de;
+    char data = ' ';
+    Animations *an_de = new Animations();
 
 public:
 
-    Decrypt()
-    {
+    Decrypt() {
+
         cout << endl << "Enter name of the file to decrypt";
         cout << endl << endl << "> ";
 
@@ -26,21 +25,20 @@ public:
 
         cout << endl;
 
-        if (!infile)
-        {
-            an_de.Anime_line(200, 2);
+        if (!infile) {
+
+            an_de->Anime_line(200, 2);
             cout << "Error opening file!" << endl << endl;
-        }
-        else
-        {
+
+        } else {
             //Target file
             //-----------
             std::ofstream outfile("DECRYPTED.txt");
 
-            an_de.Anime_line(200, 2);
+            an_de->Anime_line(200, 2);
 
-            while (infile)
-            {
+            while (infile) {
+
                 Sleep(5);
                 //Read encrypted data from source file
                 //------------------------------------
@@ -56,14 +54,15 @@ public:
             //---------------------
             outfile.close();
 
-            if (data != 0)
-            {
+            if (data != 0) {
+
                 cout << endl;
-                an_de.Anime_line(200, 2);
+                an_de->Anime_line(200, 2);
                 cout <<  "Decrypt successfull!" << endl;
                 cout << endl;
                 cout << "Decrypted data put in DECRYPTED.txt" << endl << endl;
             }
         }
+        delete an_de;
     }
 };

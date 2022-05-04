@@ -1,70 +1,59 @@
 #include <Headers.h>
-#include <Using.h>
-#include <Pragma.h>
 
 //Encrypt and Decrypt files
 //-------------------------
-#include "Encrypt.cpp"
-#include "Decrypt.cpp"
+#include "Encrypt.h"
+#include "Decrypt.h"
 
-class Program
-{
-private:
+using namespace std;
+
+void Choice();
+
+int main() {
+
+    SetConsoleTitleA("Encrypto v1.0");
+    system("color e");
+
+    for (;;) {
+
+        cout << "| 1 | Encrypt";
+        cout << endl << "| 2 | Decrypt";
+        cout << endl << "| 3 | Clear";
+        cout << endl << "| 0 | Exit";
+
+        Choice();
+    }
+}
+
+void Choice() {
 
     char choice;
 
-public:
-    
-    Program()
-    {
-        SetConsoleTitleA("Encrypto v1.0");
+    cout << endl << endl << "> ";
 
-        for (;;)
-        {
-            system("color e");
+    cin >> choice;
 
-            cout << "| 1 | Encrypt";
-            cout << endl << "| 2 | Decrypt";
-            cout << endl << "| 3 | Clear";
-            cout << endl << "| 0 | Exit";
+    if (choice == '1') {
 
-            Choice();
-        }
+        Encrypt* e = new Encrypt();
+        delete e;
+
+    } else if (choice == '2') {
+
+        Decrypt* d = new Decrypt();
+        delete d;
+
+    } else if (choice == '3') {
+
+        system("cls");
+
+    } else if (choice == '0') {
+
+        exit(0);
+
+    } else {
+
+        cout << endl << "Wrong arguments!";
+        Choice();
     }
-
-    void Choice()
-    {
-        cout << endl << endl << "> ";
-
-        cin >> choice;
-
-        if (choice == '1')
-        {
-            Encrypt e;
-        }
-        else if (choice == '2')
-        {
-            Decrypt d;
-        }
-        else if (choice == '3')
-        {
-            system("cls");
-        }
-        else if (choice == '0')
-        {
-            exit(0);
-        }
-        else
-        {
-            cout << endl << "Wrong arguments!";
-            Choice();
-        }
-    }
-};
-
-int main()
-{
-    Program p;
-
-    return 0;
 }

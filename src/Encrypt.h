@@ -1,19 +1,19 @@
 #include <Headers.h>
-#include <Using.h>
-#include <Pragma.h>
+
+using namespace std;
 
 class Encrypt
 {
 private:
 
     char source[100];
-    char data;
-    Animations an_en;
+    char data = ' ';
+    Animations *an_en = new Animations();
 
 public:
 
-    Encrypt()
-    {
+    Encrypt() {
+
         cout << endl << "Enter name of the file to encrypt";
         cout << endl << endl << "> ";
 
@@ -26,21 +26,21 @@ public:
 
         cout << endl;
 
-        if (!infile)
-        {
-            an_en.Anime_line(200, 2);
+        if (!infile) {
+
+            an_en->Anime_line(200, 2);
             cout << "Error opening file!" << endl << endl;
-        }
-        else
-        {
+
+        } else {
+
             //Target file
             //-----------
             std::ofstream outfile("ENCRYPTED.txt");
 
-            an_en.Anime_line(200, 2);
+            an_en->Anime_line(200, 2);
 
-            while (infile)
-            {
+            while (infile) {
+
                 Sleep(5);
                 //Read data from source file
                 //--------------------------
@@ -56,14 +56,15 @@ public:
             //---------------------
             outfile.close();
 
-            if (data != 0)
-            {
+            if (data != 0) {
+
                 cout << endl;
-                an_en.Anime_line(200, 2);
+                an_en->Anime_line(200, 2);
                 cout << "Encrypt successfull!" << endl;
                 cout << endl;
                 cout << "Encrypted data put in ENCRYPTED.txt" << endl << endl;
             }
         }
+        delete an_en;
     }
 };
